@@ -35,8 +35,8 @@ if __name__ == "__main__":
     row, col = config.img_height, config.img_width
         
     print "Pre-processing test data..."
-    filenames = glob.glob("{}/round2/test/center/*.jpg".format(data_path))
+    filenames = glob.glob("{}/test/center/*.jpg".format(data_path))
     filenames = sorted(filenames)
     out_name = "{}/X_test_hsv_gray_diff_ch4".format(data_path)
-    X_test = make_hsv_grayscale_diff_data(2)
+    X_test = make_hsv_grayscale_diff_data(4)
     np.save(out_name, X_test)

@@ -23,6 +23,10 @@ def create_nvidia_model1():
     model.add(Activation('relu'))
     model.add(Convolution2D(64, 3, 3, subsample=(2, 2), border_mode="same"))
     model.add(Flatten())
+
+	# Added a Dropout layer to help reduce overfitting. 
+    model.add(Dropout(0.5))
+
     model.add(Activation('relu'))
     model.add(Dense(100))
     model.add(Activation('relu'))

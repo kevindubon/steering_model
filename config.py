@@ -8,7 +8,7 @@ class DataConfig(object):
 class TrainConfig(DataConfig):
     model_name = "nvidia1"
     batch_size = 32
-    num_epoch = 20
+    num_epoch = 25
     val_part = 3
     X_train_mean_path = "data/X_train_"+ DataConfig.data_name + "_"+ model_name + "_mean.npy"
     
